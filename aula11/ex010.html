@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pr-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DETRAN COMP</title>
+</head>
+<body>
+    <h1> Sistema para Calcular Multas </h1>
+    Insira a velocidade do carro: 
+    <input type="number" name="campVal" id="campVal" >
+    Km/h
+    <input type="button" value="Calcular" onclick="calc()">
+
+
+    <div id="resps"> </div>
+<script>
+
+
+function calc(){
+    let inptVelo = document.querySelector('#campVal');
+    let velocity = Number(inptVelo.value);
+    let resp = document.getElementById('resps');
+    resp.innerHTML = `<p>Sua velocidade atual é de <strong>${velocity}</strong> km/h.</p>`;
+    if(velocity > 60)
+    {
+        resp.innerHTML += '<p> Você está acima da velocidade. Você foi <strong>MULTADO!!!!</strong></p>'
+    }
+    resp.innerHTML +='<p> Dirija sempre utilizando cinto de segurança </p>'
+     
+}
+
+
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de Java Scritpt</title>
+
+    <style>
+        body {
+            font: normal 15pt Arial;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var name = window.prompt('Qual seu nome??');
+        //Contando número de letras do nome
+        document.write(`<p> Olá ${name}! Seu nome tem ${name.length} letras. </p>`);
+        //Transformando letras tudo em maisuculas
+        document.write(`<p>Seu nome escrito em letras maíusculas fica ${name.toUpperCase()}</p>`);
+        //Transformando letras em minusculas
+        document.write(`<p> Seu nome escrito em letras minusculas fica ${name.toLowerCase()} </p>`);
+        
+        //Armazenando salario convertido
+   
+        //Number.parseInt(variavel);
+        //Number.parseFloat(variavel);
+        //Number(variavel); ai ele se vira para converter
+        var salario = Number(window.prompt('Digite seu salario:'));
+        //Convertendo o salario para sair como moeda local
+        document.write(`O seu salario é : ${salario.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})} .`); 
+
+    </script>
+</body>
+
+</html>

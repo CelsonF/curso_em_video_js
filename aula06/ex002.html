@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso de Java Script</title>
+</head>
+
+<style>
+body{
+    background-color: rgb(88, 93, 158);
+    font: normal  20pt Arial;
+    color: #fff;
+}
+
+h1:first-child{
+    color: rgb(229, 231, 121);
+}
+
+
+</style>
+<body>
+    
+    <h1> Este é um curso de Java Script </h1>
+    <p>Olá mundo , estou comçando a desenvolver em java script  </p>
+
+
+    <script>
+    //Iniciando site com alert
+    window.alert("Bem vindo ao Curso de Java Script");
+    
+    
+    //Perguntando nome e armazenando
+    let name = window.prompt("Qual seu nome ?");
+    //pegando variavel e mostrando em pop-up
+    window.alert("Bem vindo " +name+ "! Este é o Curso de Java Script .");
+    
+    
+    //Declarando um confirm
+    let likeCurse = window.confirm('Olá , está gostando de Java Script');
+    
+    //Fazendo condicional para ver se o aluno está ou não gostando do curso de Java Script
+    if (likeCurse == true){
+        document.write("O aluno " +name+" está gostando do Curso de Java Script.");
+    }
+    else{
+        document.write("O aluno " +name+ " não está gostando do Curso.");
+    }
+
+    
+
+
+    </script>
+
+</body>
+</html>

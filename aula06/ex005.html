@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ESTUDANDO O DOM</title>
+    <style> 
+    body{
+        background-color:rgb(41, 136, 173);
+        color: aliceblue;
+        font: normal 15pt Arial;
+    }
+    </style>
+</head>
+<body>
+    
+    <h1> Iniciando estudos DOM </h1>
+
+    <!-- <p>  Estamos utilizando como servidor local o <i> <u> Watch in Chrome </u> </i> adicionando a extenção no google chrome e no <strong>VS CODE</strong>  </p> -->
+
+    <p> Aqui vai o resultado </p>
+
+    <p> Aprendendo a usar <strong> DOM </strong> em Java Script </p>
+
+    <div> Clique em mim </div>
+    <!-- Testando o DOM como se não houvesse amanhã kakakakakaka -->
+    </br>
+
+    <div id="msg">
+     Pegando mensagem com GET ELEMENT BY ID ('ID');
+    </div>
+
+    <script>
+
+
+   var corpo = window.document.body;  
+   var p1 = window.document.getElementsByTagName('p')[1];
+   window.document.write('Está escrito assim: ' + p1.innerHTML); 
+   var divId = window.document.getElementById('msg');
+    
+   //divId.textContent = 'Está sendo adicionado depois'; 
+   divId.style.background = '#DEE';
+   divId.style.color = '#0AA';
+   corpo.style.transition = '0.8s';
+   corpo.style.backgroundColor = '#333';
+   
+
+    // for (let i = 0 ; i < p2; i++){
+    // var p1 = window.document.getElementsByTagName('p')[i];
+    //     var testText = p1.innerText;
+    //     window.document.write('Está escrito assim: ' + p1.innerText);
+    //     if (testText === "") {
+    //         console.log(i);
+    //     }
+    // }
+
+
+    </script>
+</body>
+</html>

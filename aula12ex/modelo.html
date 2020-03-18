@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>MODELO EXERCICIO</title>
+</head>
+
+<body>
+    <header>
+        <h1> Verificador de Idade </h1>
+    </header>
+    <section>
+        <p> Ano de Nascimento:
+            <input id="txtAno" type="number" name="txtAno" min="0" title="Digite sua Idade">
+        </p>
+        <p>
+            Sexo:
+            <input type="radio" name="radsex" id="masc" checked>
+            <label for="masc">Masculino</label>
+            <input type="radio" name="radsex" id="femi">
+            <label for="femi">Feminino</label>
+        </p>
+        <p>
+            <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+    <div id="resp">
+       Preencha os dados acima para ver o resultado!
+    </div>
+    </section>
+
+    <footer>
+        <p> &copy; Celson Fernando</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

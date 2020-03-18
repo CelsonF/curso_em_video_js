@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Realizando Calculos pelo DOM</title>
+    
+
+    <style>
+    body{
+        font:normal 10pt Arial;
+    }
+    input {
+        width:5rem;
+        font:normal 10pt Arial;
+        background-color:#3d4a92;
+        color: aliceblue;
+        border: none;
+        padding: 2px;
+    }
+    input[type='button'] {
+        font:bold 10pt Arial;
+        border:1px solid #000;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    #titlesResp{
+        margin: 30px 0 0 0;
+    }
+    .resps {
+        margin:5px 0 0 0;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txt1" id="txt1"/> +
+    <input type="number" name="txt2" id="txt2"/>
+    <input type="button" value="SOMA" class="somar"> 
+
+    <p id="titlesResp"> <strong> Resultado: </strong> </p>
+    <p class="resps"> </p>
+
+    <hr>
+    
+    <h1>Subtraindo Valores</h1>
+    <input type="number" name="txt1" id="txtSub1"/> -
+    <input type="number" name="txt2" id="txtSub2"/>
+    <input type="button" value="SUBTRAIR" class="subtrair"> 
+
+    <p id="titlesResp"> <strong> Resultado: </strong> </p>
+    <p class="resSub"> </p>
+
+
+    <hr>
+    
+    <h1> Dividir Valores </h1>
+    
+    <input type="number" class="txtDiv1" /> ÷
+    <input type="number" class="txtDiv2" />
+    <input type="button" value="DIVIDIR" class="dividir">
+    
+    <p class="titleResp"> <strong> Resultado: </strong> </p>
+    <p class="respDiv"></p>
+    
+    <hr>
+    
+    <h1> Multiplicar Valores </h1>
+
+    <input type="number" class="textMult1"> * 
+    <input type="number" class="textMult2">
+    <input type="button" value="MULTIPLCAR" class="multi">
+
+    <p class="title-resp-multi"> <strong> Resultado: </strong>  </p>
+    <p class="respMult"></p>
+
+    <script>
+
+    let sum = document.querySelector(".somar");  
+    let subt = document.querySelector(".subtrair");
+    let multp = document.querySelector(".multi");
+    let divid = document.querySelector(".dividir");
+
+
+    sum.addEventListener('click',somar);
+    subt.addEventListener('click',subtrair);
+    multp.addEventListener('click',multiplicar);
+    divid.addEventListener('click',dividir);
+
+    function somar() {
+        let res = window.document.querySelector('.resps');
+        //Utilizando pelo ID  ou  querySelector()
+        let tn1 = document.getElementById('txt1');
+        let tn2 = document.querySelector('#txt2');
+        //Soma
+        let n1 = Number(tn1.value);
+        let n2 = Number(tn2.value);
+        //resP
+        let result = n1 + n2
+        res.innerHTML = `A soma entre ${n1} + ${n2} = ${result}`
+    }
+    function subtrair() {
+        //Pegando Primeiro Input
+        let tn1 = document.querySelector("#txtSub1");
+        //Pegando Segundo Input
+        let tn2 = document.querySelector("#txtSub2");
+        //Pegando local a onde ira armazenar a resposta
+        let rep = document.querySelector(".resSub");
+        
+        //Pegando o valor do primeiro e segundo input
+        let n1 = Number(tn1.value);
+        let n2 = Number(tn2.value);
+
+        //Realizando a subtração
+        let resps = n1 - n2;
+        rep.innerHTML = `A subtração entre ${n1} - ${n2} = ${resps}`;
+
+    }
+    function dividir() {
+    //Pegando primero campo do Input
+    let tn1 = document.querySelector('.txtDiv1');
+    //Pegando segundo campo do Input
+    let tn2 = document.querySelector('.txtDiv2');
+    //pegando paragrafo para colocar resposta
+    let respOut = document.querySelector('.respDiv');
+
+    //Realizando a captura dos valores dos  campos do Input
+    let number1 = Number(tn1.value)
+    let number2 = Number(tn2.value)
+
+    //Realizando divisão  entre os valores 
+    let resp = number1 / number2;
+    respOut.innerHTML = `A divisão entre ${number1} ÷ ${number2} = ${resp}`;
+
+    }
+    function multiplicar() {
+        //Pegando o elemento INPUT
+        let primaryNumber = document.querySelector(".textMult1");
+        //Pegando o segundo Elemento INPUT
+        let secondNumber = document.querySelector(".textMult2");
+        //Pegando o elemento  de resposta
+        let respMu = document.querySelector(".respMult");
+
+        //Realizando a Multiplicação por meio dos valores armazenados nos inputs 
+        let numero1 = Number(primaryNumber.value);
+        let numero2 = Number(secondNumber.value);
+        
+        //Realizando a multiplicação  dos números
+        let respMulti = numero1 * numero2;
+        respMu.innerHTML = `A multiplicação entre ${numero1} * ${numero2} = ${respMulti}`;
+    }
+
+
+    
+    </script>
+</body>
+</html>

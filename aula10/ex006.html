@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos DOM</title>
+   
+   <style>
+   #areaInteract {
+       font: normal 15pt Arial;
+       color: #FFF;
+       width: 200px;
+       height: 200px;
+       line-height: 200px;
+       background-color: rgb(3, 68, 3);
+       text-align: center;
+   }
+   </style>
+    
+</head>
+
+<body>
+
+    <!-- Para não poluir o HTML  pode ser adicionado Eventlist via java script para realizar as funções por lá -->
+    <!-- Substituindo os eventos do HTML diretamente por eventlist pelo JS
+    onclick="clickOfMouser()"
+    onmouseenter="moveOfMouseEnter()" 
+    onmouseout="moveOfMouseOut()" -->
+    
+    <div id="areaInteract">
+       Interaja aqui...
+    </div>
+
+<script>
+//Declarando variaveis globais
+var a = document.getElementById('areaInteract');
+a.style.cursor = "pointer";
+
+//Adicionando eventos pelo Listerns
+//(evento a ser passado , nome do metodo)
+a.addEventListener('click',clicar);
+a.addEventListener('mouseenter',entrar);
+a.addEventListener('mouseout',sair);
+
+
+//Função de clicar na area de algum objeto
+function clicar() {
+     a.innerText = "Você clicou na área!";
+     a.style.backgroundColor="red";
+}
+
+//Função de entrar na area de algum objeto
+function entrar() {
+    a.innerText="Você entrou na área!";
+}
+
+//Função ao sair da área de interação
+function sair(){
+    a.innerText="Você saiu da área!";
+    a.style.backgroundColor="green";
+}
+
+
+</script>
+
+</body>
+</html>
