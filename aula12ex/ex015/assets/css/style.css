@@ -17,6 +17,14 @@ margin: auto;
 box-shadow: 3px 3px 3px rgba(0,0,0,0.45);
 }
 
+/*Moldura*/
+.moldura {
+width: 10rem;
+height: 10rem;
+border-radius: 50%;
+}
+
+
 footer{
     color: #ffffff;
     text-align: center;
