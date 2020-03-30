@@ -1,0 +1,34 @@
+body{
+    font: normal 15pt Arial;
+background: rgb(57, 109, 151);
+}
+
+header{
+color: #ffffff;
+text-align: center
+}
+
+section{
+background-color: #ffffff;
+border-radius: 10px;
+padding: 15px;
+width: 500px;
+margin: auto;
+box-shadow: 3px 3px 3px rgba(0,0,0,0.45);
+}
+
+/*Moldura*/
+.moldura {
+width: 10rem;
+height: 10rem;
+border-radius: 50%;
+}
+
+
+footer{
+    color: #ffffff;
+    text-align: center;
+    font-style: italic;
+}
+
+/* FIM STYLE GERAL */
